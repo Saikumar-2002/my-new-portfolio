@@ -1,0 +1,133 @@
+/* Interests Section Styles */
+.interests {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #12122e 0%, #0a0a1e 100%);
+}
+
+.interests__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Interests Grid */
+.interests__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Interest Card */
+.interests__card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.interests__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.interests__card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.interests__card:hover::before {
+    opacity: 1;
+}
+
+/* Icon */
+.interests__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.interests__card:hover .interests__icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Title */
+.interests__title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Description */
+.interests__description {
+    color: #a0a0c0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .interests {
+        padding: 4rem 1rem;
+    }
+
+    .interests__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .interests__card {
+        padding: 1.5rem;
+    }
+
+    .interests__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .interests__icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .interests__title {
+        font-size: 1.1rem;
+    }
+
+    .interests__description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interests__grid {
+        grid-template-columns: 1fr;
+    }
+}

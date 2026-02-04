@@ -1,0 +1,212 @@
+/* Projects Section Styles */
+.projects {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #12122e 0%, #0a0a1e 100%);
+}
+
+.projects__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects Grid */
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Project Card */
+.projects__card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.projects__card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.projects__card--featured {
+    border-color: rgba(102, 126, 234, 0.4);
+    background: rgba(102, 126, 234, 0.05);
+}
+
+/* Project Image */
+.projects__image {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #1a1a3e 0%, #0a0a1e 100%);
+    overflow: hidden;
+}
+
+.projects__image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #667eea;
+    text-align: center;
+    padding: 1rem;
+}
+
+.projects__image-placeholder span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.projects__card:hover .projects__image-placeholder {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.projects__category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(10, 10, 30, 0.8);
+    color: #667eea;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.projects__featured-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    color: #fff;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Project Content */
+.projects__content {
+    padding: 1.5rem;
+}
+
+.projects__title {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.projects__card:hover .projects__title {
+    color: #667eea;
+}
+
+.projects__description {
+    color: #a0a0c0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Technologies Tags */
+.projects__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.projects__tech-tag {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Project Links */
+.projects__links {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.projects__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.projects__link--github {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects__link--github:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.projects__link--demo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.projects__link--demo:hover {
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects {
+        padding: 4rem 1rem;
+    }
+
+    .projects__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects__image {
+        height: 160px;
+    }
+
+    .projects__content {
+        padding: 1.25rem;
+    }
+
+    .projects__title {
+        font-size: 1.1rem;
+    }
+
+    .projects__links {
+        flex-direction: column;
+    }
+
+    .projects__link {
+        justify-content: center;
+    }
+}
