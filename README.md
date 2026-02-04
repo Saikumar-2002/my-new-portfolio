@@ -227,9 +227,9 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👤 Author
 
 **John Doe**
-- GitHub: [@johndoe](https://github.com/johndoe)
-- LinkedIn: [John Doe](https://linkedin.com/in/johndoe)
-- Email: johndoe@email.com
+- GitHub: [@Saikumar-2002](https://github.com/Saikumar-2002)
+- LinkedIn: [Saikumar Kalva](https://www.linkedin.com/in/saikumar1002)
+- Email: [saikumarkalva10@gmail.com]
 
 ---
 
