@@ -13,7 +13,7 @@ const Experience = () => {
             company: "Unykloud Technologies",
             companyLogo: "UNY",
             location: "Nanakramguda,Hyderabad",
-            duration: "Mar 2025 - Mar 2026",
+            duration: "Mar 2025 - Jan 2026",
             type: "Full-Time",
             description: "Worked on developing responsive web applications using React.js and participated in agile development processes.",
             responsibilities: [
@@ -40,7 +40,7 @@ const Experience = () => {
                 "Managed databases using MongoDB and performed CRUD operations",
                 "Worked with version control (Git) and followed branching strategies"
             ],
-            technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB", "Git"]
+            technologies: ["HTML5", "CSS3", "JavaScript", "Git"]
         }
     ];
 

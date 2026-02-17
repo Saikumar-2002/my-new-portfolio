@@ -28,7 +28,7 @@ const About = () => {
                         <div className="about__intro">
                             <p>
                                 Hello! I'm a passionate and dedicated <strong>Software Developer</strong> with
-                                around <strong>1 year of hands-on experience</strong> in building modern web
+                                around <strong>11 months  of hands-on experience</strong> in building modern web
                                 applications using popular frontend and full-stack technologies. I enjoy
                                 creating scalable, user-friendly solutions and contributing to meaningful projects.
                             </p>
