@@ -60,7 +60,7 @@ const Hero = () => {
                     {/* Call-to-Action Buttons */}
                     <div className="hero__cta">
                         <a
-                            href="/public/SAI_KUMAR_RESUME.pdf"
+                            href="SAI_KUMAR_RESUME.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hero__btn hero__btn--primary"

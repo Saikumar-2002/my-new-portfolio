@@ -20,6 +20,8 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
 
+    
+
     // Contact information
     const contactInfo = [
         {
@@ -174,7 +176,7 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <div className="contact__form-wrapper">
-                        <form className="contact__form" onSubmit={handleSubmit}>
+                        <form action="https://formspree.io/f/xojprloo" className="contact__form" onSubmit={handleSubmit}>
                             {/* Name Input */}
                             <div className={`contact__form-group ${errors.name ? 'contact__form-group--error' : ''}`}>
                                 <label htmlFor="name" className="contact__form-label">Your Name</label>

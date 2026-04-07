@@ -3,12 +3,24 @@
  * Showcase portfolio projects with descriptions, technologies, and links
  */
 import './Projects.css';
+import apImage from '../../assets/ap_image.png';
 
 const Projects = () => {
     // Projects data
     const projectsData = [
         {
             id: 1,
+            title: "AP Police Management System",
+            description: "A production-grade full-stack application for managing hierarchical police units (Zone → Range → District → Circle → Police Station). It also includes a static fitness tracking website that lets users log workouts, monitor progress, and set personal fitness goals without requiring login. Designed for quick and simple daily tracking with an easy, user-friendly interface.",
+            image: apImage,
+            technologies: ["React.js", "JavaScript","HTML5","CSS3","Node.js", "Express.js", "SQlite"],
+            category: "Full Stack",
+            github: "https://github.com/Saikumar-2002/AP-POLICE-Management-System",
+            demo: "https://ts-police-ms.vercel.app/",
+            featured: false
+        },
+        {
+            id: 2,
             title: "Task Management Application",
             description: "A full-featured task management application with user authentication, task creation, editing, and deletion capabilities. Features responsive design and smooth user experience.",
             image: null,
@@ -19,7 +31,7 @@ const Projects = () => {
             featured: false
         },
         {
-            id: 2,
+            id: 3,
             title: "Knowledge Vault",
             description: "A personal knowledge management web app where users can securely save notes, images, and learning resources, organized with tags, categories, and powerful search.",
             image: null,
@@ -30,7 +42,7 @@ const Projects = () => {
             featured: false
         },
         {
-            id: 3,
+            id: 4,
             title: "Crop price Calculator App",
             description: "A simple web tool that calculates crop price based on given inputs and instantly displays the result.It also lists the calculated prices for easy comparison and tracking.",
             image: null,
@@ -41,7 +53,7 @@ const Projects = () => {
             featured: false
         },
         {
-            id: 4,
+            id: 5,
             title: "NetFlix Clone UI",
             description: "A responsive Netflix-style streaming UI that showcases movies and series with dynamic browsing sections and banners.Built to demonstrate modern frontend skills like component-based design, API fetching, and interactive layouts",
             image: null,
@@ -52,7 +64,7 @@ const Projects = () => {
             featured: false
         },
         {
-            id: 5,
+            id: 6,
             title: "[BLOGGING WEBSITE] USING HTML,CSS AND JS.",
             description: "A full-stack blogging platform where users can create, edit, delete, and manage posts with a clean and responsive interface.It supports real-time data storage, authentication, and seamless content management for sharing ideas online.",
             image: null,
@@ -62,17 +74,7 @@ const Projects = () => {
             demo: null,
             featured: false
         },
-        {
-            id: 6,
-            title: "Apna Gym",
-            description: "A static fitness tracking website that lets users log workouts, monitor progress, and set personal fitness goals without requiring login.Designed for quick and simple daily tracking with an easy, user-friendly interface.",
-            image: null,
-            technologies: ["React.js", "JavaScript","HTML5", "CSS","bootstrap"],
-            category: "Frontend",
-            github: "https://github.com/Saikumar-2002/ApnaGym-with-react-js",
-            demo: "https://apna-gym-823701.netlify.app/",
-            featured: false
-        }
+        
     ];
 
     return (
@@ -90,12 +92,16 @@ const Projects = () => {
                         <div key={project.id} className={`projects__card ${project.featured ? 'projects__card--featured' : ''}`}>
                             {/* Project Image Placeholder */}
                             <div className="projects__image">
-                                <div className="projects__image-placeholder">
-                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-                                        <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v12h16V6H4zm2 2h2v2H6V8zm0 4h12v4H6v-4z" />
-                                    </svg>
-                                    <span>{project.title}</span>
-                                </div>
+                                {project.image ? (
+                                    <img src={project.image} alt={project.title} className="projects__image-content" />
+                                ) : (
+                                    <div className="projects__image-placeholder">
+                                        <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                                            <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v12h16V6H4zm2 2h2v2H6V8zm0 4h12v4H6v-4z" />
+                                        </svg>
+                                        <span>{project.title}</span>
+                                    </div>
+                                )}
                                 {/* Category Badge */}
                                 <span className="projects__category">{project.category}</span>
                                 {/* Featured Badge */}
